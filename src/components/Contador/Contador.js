@@ -33,7 +33,7 @@ const Contador = () => {
         // setTemp(18)
         // setHumedad(95)
         // setCiudad('Chivilcoy')
-        console.log('hola');
+        // console.log('hola');
     }, [counter, titulo, temp])
 
   return (

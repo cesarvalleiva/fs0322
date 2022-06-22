@@ -1,9 +1,7 @@
 .contador {
-    width: 100%;
-    border: 1px solid red;
     padding: 20px;
     margin: 20px;
-    margin-bottom: 300px;
+    /* margin-bottom: 300px; */
 }
 
 .contador p {

@@ -1,20 +1,24 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Formulario from './components/Formulario';
-import Cualquiera from './img/simpsons.jpg'
+import Home from './pages/Home';
+import Nosotros from './pages/Nosotros';
+import Contacto from './pages/Contacto';
+import Productos from './pages/Productos';
+import Error from './pages/Error/Error';
 import './App.css';
-import Contador from './components/Contador';
 
 function App() {
   return (
-    <>
-      {/* <img src={Cualquiera} alt="Los Simpsons" /> */}
-      <div className="container border">
-      <Navbar marca="PDTC" modalidad="online"/>
-        <Formulario />
-        <Contador />
-      </div>
-      
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
 
