@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useContext } from 'react'
+import { Context } from '../../store/AppContext'
 import './Contador.css'
 
-const Contador = () => {
-    const [counter, setCounter] = useState(10);
+const Contador = (props) => {
+    const {contador, add} = useContext(Context);
+    const [counter, setCounter] = useState(contador);
     const [titulo, setTitulo] = useState('El valor del contador es:')
     const [ciudad, setCiudad] = useState('')
     const [temp, setTemp] = useState(0)
@@ -46,6 +49,9 @@ const Contador = () => {
         <p>Temperatura: {temp}</p>
         <button className='btn btn-warning ms-2 mt-4' onClick={cambiarTemp}>Cambiar Temp</button>
         <input type="text" placeholder='Ingrese su ciudad' value={ciudad} onChange={() => console.log('hola')} />
+        {
+            add(12,14)
+        }
     </div>
   )
 }

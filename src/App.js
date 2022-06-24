@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar nombre={'Rodolfo'} apellido={'Lopez'} />
       <Routes>
         <Route path="/fs0322" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
